@@ -1,0 +1,16 @@
+service: huggingface-on-lambda
+
+provider:
+  name: aws
+  region: eu-central-1 
+  memorySize: 1024 
+  timeout: 30 
+
+functions:
+  huggingface:
+    # paste the <image-uri>@<image-digest>
+    image: 077590795309.dkr.ecr.eu-west-1.amazonaws.com/huggingface-on-lambda:latest
+    events:
+      - http:
+          path: prediction # http path
+          method: post # http method

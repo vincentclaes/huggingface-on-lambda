@@ -1,8 +1,13 @@
-# huggingface-on-lambda
+# Huggingface on Lambda
 
-- follow the steps in the notebook [huggingface_pretrained_model.ipynb](./huggingface_pretrained_model.ipynb)
-- open an AWS cloudshell
-      git clone https://github.com/vincentclaes/huggingface-on-lambda.git
-      npm install serverless
-      node_modules/serverless/bin/serverless.js deploy
-      curl -X POST https://8af9ar02gi.execute-api.eu-west-1.amazonaws.com/dev/prediction
+Follow the steps in the notebook [huggingface_pretrained_model.ipynb](./huggingface_pretrained_model.ipynb).
+
+Here we will:
+
+ - read a model from huggingface
+ - save it locally
+ - create a docker file, build and push to ecr
+ - create a serverless file that points to our docker image
+ - deploy our model behind a lambda function and connect with an api gateway
+ - provision at least 1 hot lambda to get sub second responses!
+ - call our model using curl

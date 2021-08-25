@@ -1,6 +1,6 @@
 # Huggingface on Lambda
 
-Follow the steps in the notebook [huggingface_pretrained_model.ipynb](./huggingface_pretrained_model.ipynb).
+Follow the steps in the (sagemaker) notebook [huggingface_pretrained_model.ipynb](./huggingface_pretrained_model.ipynb).
 
 Here we will:
 
